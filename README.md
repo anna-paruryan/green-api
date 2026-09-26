@@ -1,7 +1,9 @@
 # MAX Chat Client — Тестовое задание (Фронтенд разработчик React)
 
 Веб-интерфейс для отправки и получения сообщений через GREEN-API, по мотивам интерфейса MAX (web.max.ru).
-
+> **Примечание**: задание выполнено для **WhatsApp** через GREEN-API (согласно допущению в ТЗ —
+> "если вы не можете выполнить тестовое задание для мессенджера MAX, можете сделать для WhatsApp
+> или Telegram"). Визуальный стиль интерфейса — по мотивам WhatsApp Web, а не web.max.ru.
 ## Стек
 - React + TypeScript + Vite
 - Tailwind CSS v4 (design tokens через CSS-переменные, container queries)
@@ -73,7 +75,7 @@ npm run preview
 ```
 
 ## Деплой
-Проект задеплоен на Vercel: [ссылка после деплоя](https://green-api-liard.vercel.app/login)
+Проект задеплоен на Vercel: [ссылка](https://green-api-liard.vercel.app/login)
 
 ## Структура проекта
 ````
