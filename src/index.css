@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --max-bg: #f4f5f7;
+  --max-surface: #ffffff;
+  --max-surface-secondary: #f7f8fa;
+  --max-surface-hover: #eef0f2;
+
+  /* Text */
+  --max-text: #17181a;
+  --max-text-secondary: #7b7f87;
+  --max-text-muted: #a0a4ab;
+  --max-text-on-primary: #ffffff;
+
+  /* Borders */
+  --max-border: #e7e8eb;
+  --max-divider: #eef0f2;
+
+  /* Primary */
+  --max-primary: #25d366;
+  --max-primary-hover: #34e67f;
+  --max-primary-soft: rgba(37, 211, 102, 0.14);
+
+  /* Messages */
+  --max-message-outgoing: #d9fdd3;
+  --max-message-incoming: #ffffff;
+
+  --max-message-time: #667781;
+  --max-message-check: #35c759;
+
+  --max-message-radius: 8px;
+  --max-message-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+
+  --max-overlay-dark: rgba(0, 0, 0, 0.6);
+
+  /* Status */
+  --max-online: #35c759;
+
+  /* Feedback */
+  --max-danger: #ef4444;
+
+
+  /* Radius */
+  --max-radius-sm: 8px;
+  --max-radius-md: 12px;
+  --max-radius-lg: 16px;
+
+  /* Shadows */
+  --max-shadow:
+          0 1px 2px rgba(0, 0, 0, 0.04),
+          0 4px 12px rgba(0, 0, 0, 0.04);
+
+  --max-shadow-message:
+          0 1px 0.5px rgba(0, 0, 0, 0.13);
+
+  /* Font */
+  font-family:
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+
+  color: var(--max-text);
+  background: var(--max-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   Base
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: var(--max-bg);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--max-primary);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+::selection {
+  background: var(--max-primary-soft);
+  color: var(--max-text);
+}
+
+/* ========================================
+   Scrollbars
+======================================== */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfd2d7 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #cfd2d7;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #b9bdc4;
+}
+
+/* ========================================
+   Dark theme
+======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Backgrounds */
+    --max-bg: #17191c;
+    --max-surface: #202327;
+    --max-surface-secondary: #1c1f22;
+    --max-surface-hover: #30343a;
+
+    /* Text */
+    --max-text: #f3f4f6;
+    --max-text-secondary: #a5a9b1;
+    --max-text-muted: #777c85;
+    --max-text-on-primary: #ffffff;
+
+    /* Borders */
+    --max-border: #30343a;
+    --max-divider: #2a2e33;
+
+    /* Primary */
+    --max-primary: #25d366;
+    --max-primary-hover: #34e67f;
+    --max-primary-soft: rgba(37, 211, 102, 0.14);
+
+    /* Messages */
+    --max-message-outgoing: #005c4b;
+    --max-message-incoming: #202c33;
+
+    --max-message-time: #8696a0;
+    --max-message-check: #25d366;
+
+    --max-message-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    --max-overlay-dark: rgba(0, 0, 0, 0.6);
+    /* Status */
+    --max-online: #35c759;
+
+    /* Feedback */
+    --max-danger: #f87171;
+
+
+    /* Shadows */
+    --max-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.2),
+            0 4px 16px rgba(0, 0, 0, 0.18);
+
+    --max-shadow-message:
+            0 1px 0.5px rgba(0, 0, 0, 0.3);
+  }
+
+  * {
+    scrollbar-color: #4b5058 transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #4b5058;
+  }
+}
+
+/* ========================================
+   WhatsApp-like message background
+======================================== */
+
+.whatsapp-bg {
+  background-color: #efeae2;
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-repeat: repeat;
+}
+
+.dark .whatsapp-bg {
+  background-color: #0b141a;
+  background-image: none;
+  opacity: 0.9;
+}
+
+/* ========================================
+   Focus
+======================================== */
+
+@layer base {
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--max-primary);
+    outline-offset: 2px;
+  }
+}
