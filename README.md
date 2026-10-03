@@ -1,5 +1,8 @@
 # MAX Chat Client — Тестовое задание (Фронтенд разработчик React)
 
+## Деплой
+Проект задеплоен на Vercel: [ссылка](https://green-api-liard.vercel.app/login)
+
 Веб-интерфейс для отправки и получения сообщений через GREEN-API, по мотивам интерфейса MAX (web.max.ru).
 > **Примечание**: задание выполнено для **WhatsApp** через GREEN-API (согласно допущению в ТЗ —
 > "если вы не можете выполнить тестовое задание для мессенджера MAX, можете сделать для WhatsApp
@@ -71,11 +74,9 @@ npm run dev
 
 ```bash
 npm run build
-npm run preview
+
 ```
 
-## Деплой
-Проект задеплоен на Vercel: [ссылка](https://green-api-liard.vercel.app/login)
 
 ## Структура проекта
 ````
